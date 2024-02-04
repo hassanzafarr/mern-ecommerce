@@ -1,0 +1,174 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Fredoka:300,regular,500,600,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Fredoka', sans-serif;
+  user-select: none;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 5000px;
+}
+
+.navbar {
+  background-color: #203040;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  min-height: 80vh;
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+/* carousel */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h2 {
+  color: #fff;
+}
+
+.carousel img {
+  height: 300px;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel a {
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
+}
+
+/* products */
+.product-cards {
+  transition: all 0.2s ease-in-out;
+}
+.product-cards:hover {
+  transform: scale(1.05);
+}
+
+/*  top bar */
+
+.blink_text {
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  user-select: none;
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* scroll bar */
+::selection {
+  background-color: #f0c000;
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #406080;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #203040;
+  border-radius: 10px;
+}
+
+/*  slider arrow */
+
+.react-multiple-carousel__arrow {
+  background-color: #f0c000 !important;
+}
+
+.react-multiple-carousel__arrow::before {
+  color: #000000 !important;
+}
+
+/* back to top */
+.scrollTop {
+  background-color: #f0c000;
+  position: fixed;
+  border-radius: 50%;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: all opacity 0.5s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0.5;
+  left: 40px;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
